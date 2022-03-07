@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      {% style "/assets/bootstrap/css/bootstrap.min.css" %}
+      {% style "/assets/font-awesome/css/font-awesome.min.css" %}
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <!-- scripts and styles -->
+
+    <script type="text/javascript">
+     var context = "{{servlet-context}}";
+     var csrfToken = "{{csrf-token}}";
+    </script>
+    {% script "/assets/jquery/jquery.min.js" %}
+    {% script "/assets/popper.js/dist/umd/popper.min.js" %}
+    {% script "/assets/bootstrap/js/bootstrap.min.js" %}
+    <script type="text/javascript" src="cljs-out/{{figwheel/build-name}}/main_bundle.js"></script>
+  </body>
+</html>
